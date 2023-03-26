@@ -41,7 +41,7 @@ export default function Authenticated({ auth, header, children }) {
                 <aside className="main-sidebar sidebar-dark-primary elevation-4">
 
                     <Link href={route('dashboard')} className="brand-link">
-                        <img src="img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{ opacity: '0.8' }} />
+                        <img src="/img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{ opacity: '0.8' }} />
                         <span className="brand-text font-weight-light">Logo</span>
                     </Link>
 
