@@ -91,7 +91,9 @@ export default function Authenticated({ auth, header, children }) {
                                 </div>
                                 <div className="col-sm-6">
                                     <ol className="breadcrumb float-sm-right">
-                                        <li className="breadcrumb-item"><a href="#">Home</a></li>
+                                        <li className="breadcrumb-item">
+                                            <Link href={route('dashboard')}>Home</Link>
+                                        </li>
                                         <li className="breadcrumb-item active">{header}</li>
                                     </ol>
                                 </div>
