@@ -25,12 +25,12 @@ export default function Edit({ auth }) {
                             <div className="card-body">
                                 <div className="form-group">
                                     <label htmlFor="userName">user name</label>
-                                    <input value={data.name} onChange={e => { setData(e.target.value) }} type="text" className="form-control" id="userName" placeholder="Enter user name" />
+                                    <input value={data.name} onChange={e => { setData('name', e.target.value) }} type="text" className="form-control" id="userName" placeholder="Enter user name" />
                                     {errors.name && <div>{errors.name}</div>}
                                 </div>
                             </div>
                             <div className="card-footer">
-                                <button type="submit" className="btn btn-primary">Submit</button>
+                                <button type="submit" className="btn btn-primary" disabled={processing}>Submit</button>
                             </div>
                         </form>
                     </div>
