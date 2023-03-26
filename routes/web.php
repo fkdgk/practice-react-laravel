@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Profile;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -12,6 +13,8 @@ Route::middleware('auth')->group(function () {
     })->middleware(['auth', 'verified'])->name('dashboard');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::post('/profile/update',Profile\UpdateController::class)->name('profile.update');
+
 });
 
 require __DIR__.'/auth.php';
