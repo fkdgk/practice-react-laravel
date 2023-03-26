@@ -1,8 +1,9 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import { useForm } from '@inertiajs/react'
+import { useForm, usePage } from '@inertiajs/react'
 
 export default function Edit({ auth }) {
-    console.log(auth);
+    const { props } = usePage()
+
     const { data, setData, post, processing, errors } = useForm({
         name: auth.user.name,
         email: auth.user.email,
@@ -23,6 +24,13 @@ export default function Edit({ auth }) {
             <div className="row">
                 <div className="col-md-6">
                     <div className="card card-primary">
+
+                        {
+                            props.flash.message && <div className="p-3 bg-success">
+                                プロフィールを更新しました
+                            </div>
+                        }
+
                         <form onSubmit={submit}>
                             <div className="card-body">
                                 <div className="form-group">

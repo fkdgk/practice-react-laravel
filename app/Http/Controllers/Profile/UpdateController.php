@@ -18,6 +18,8 @@ class UpdateController extends Controller
             'password' => bcrypt($request->password) ,
         ]);
 
-        return redirect()->back();
+        return redirect()->back()->with([
+            'message'=>['message'=>'hoge'],
+        ]);
     }
 }
