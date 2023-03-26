@@ -12,6 +12,10 @@ class UpdateController extends Controller
      */
     public function __invoke(Request $request)
     {
+        $request -> validate([
+            'name' => ['required'],
+        ]);
+        
         $user = $request->user();
         $user -> update([
             'name' => $request -> name,
