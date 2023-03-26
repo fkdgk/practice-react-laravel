@@ -1,5 +1,5 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import { useForm, usePage } from '@inertiajs/react'
+import { useForm, Link, usePage } from '@inertiajs/react'
 export default function UserIndex({ auth }) {
   const { props } = usePage()
   console.log(props);
@@ -19,7 +19,8 @@ export default function UserIndex({ auth }) {
                     <th>ID</th>
                     <th>User</th>
                     <th>Date</th>
-                    <th>Status</th>
+                    <th>created</th>
+                    <th>edit</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -31,6 +32,7 @@ export default function UserIndex({ auth }) {
                           <td>{user.name}</td>
                           <td>{user.email}</td>
                           <td>{user.created_at}</td>
+                          <td><Link className='btn btn-primary btn-xs'>edit</Link></td>
                         </tr>
                       )
                     })
