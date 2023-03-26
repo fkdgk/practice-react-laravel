@@ -12,15 +12,18 @@ class UpdateController extends Controller
      */
     public function __invoke(Request $request)
     {
+        $user = $request->user();
         $request -> validate([
             'name' => ['required'],
+            // 'email' => 'required|email|unique:users', // Update
+            'email' => 'required|email|unique:users,email,'.$user->id, // Update
         ]);
 
-        $user = $request->user();
         $user -> update([
             'name' => $request -> name,
+            'email' => $request -> email,
         ]);
-        
+
         return redirect()->back();
     }
 }
