@@ -10,11 +10,11 @@ export default function Authenticated({ auth, header, children }) {
 
     return (
 
-        < !--Site wrapper-- >
+
         <div class="wrapper">
-          <!-- Navbar -->
+
           <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <!-- Left navbar links -->
+
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
@@ -27,9 +27,9 @@ export default function Authenticated({ auth, header, children }) {
               </li>
             </ul>
         
-            <!-- Right navbar links -->
+
             <ul class="navbar-nav ml-auto">
-              <!-- Navbar Search -->
+
               <li class="nav-item">
                 <a class="nav-link" data-widget="navbar-search" href="#" role="button">
                   <i class="fas fa-search"></i>
@@ -51,7 +51,7 @@ export default function Authenticated({ auth, header, children }) {
                 </div>
               </li>
         
-              <!-- Messages Dropdown Menu -->
+
               <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
                   <i class="far fa-comments"></i>
@@ -59,7 +59,7 @@ export default function Authenticated({ auth, header, children }) {
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                   <a href="#" class="dropdown-item">
-                    <!-- Message Start -->
+
                     <div class="media">
                       <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                       <div class="media-body">
@@ -71,11 +71,11 @@ export default function Authenticated({ auth, header, children }) {
                         <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
                       </div>
                     </div>
-                    <!-- Message End -->
+
                   </a>
                   <div class="dropdown-divider"></div>
                   <a href="#" class="dropdown-item">
-                    <!-- Message Start -->
+
                     <div class="media">
                       <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                       <div class="media-body">
@@ -87,11 +87,11 @@ export default function Authenticated({ auth, header, children }) {
                         <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
                       </div>
                     </div>
-                    <!-- Message End -->
+
                   </a>
                   <div class="dropdown-divider"></div>
                   <a href="#" class="dropdown-item">
-                    <!-- Message Start -->
+
                     <div class="media">
                       <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                       <div class="media-body">
@@ -103,13 +103,13 @@ export default function Authenticated({ auth, header, children }) {
                         <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
                       </div>
                     </div>
-                    <!-- Message End -->
+
                   </a>
                   <div class="dropdown-divider"></div>
                   <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
                 </div>
               </li>
-              <!-- Notifications Dropdown Menu -->
+
               <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
                   <i class="far fa-bell"></i>
@@ -147,20 +147,20 @@ export default function Authenticated({ auth, header, children }) {
                 </a>
               </li>
             </ul>
-          </nav>
-          <!-- /.navbar -->
-        
-          <!-- Main Sidebar Container -->
+            </nav>
+
+
+
           <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <!-- Brand Logo -->
+
             <a href="../../index3.html" class="brand-link">
               <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
               <span class="brand-text font-weight-light">AdminLTE 3</span>
             </a>
         
-            <!-- Sidebar -->
+
             <div class="sidebar">
-              <!-- Sidebar user (optional) -->
+
               <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
                   <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
@@ -170,7 +170,7 @@ export default function Authenticated({ auth, header, children }) {
                 </div>
               </div>
         
-              <!-- SidebarSearch Form -->
+
               <div class="form-inline">
                 <div class="input-group" data-widget="sidebar-search">
                   <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
@@ -182,10 +182,10 @@ export default function Authenticated({ auth, header, children }) {
                 </div>
               </div>
         
-              <!-- Sidebar Menu -->
+
               <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                  <!-- Add icons to the links using the .nav-icon class
+
                        with font-awesome or any other icon font library -->
                   <li class="nav-item">
                     <a href="#" class="nav-link">
@@ -820,14 +820,14 @@ export default function Authenticated({ auth, header, children }) {
                   </li>
                 </ul>
               </nav>
-              <!-- /.sidebar-menu -->
+
             </div>
-            <!-- /.sidebar -->
+
           </aside>
         
-          <!-- Content Wrapper. Contains page content -->
+
           <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
+
             <section class="content-header">
               <div class="container-fluid">
                 <div class="row mb-2">
@@ -841,13 +841,13 @@ export default function Authenticated({ auth, header, children }) {
                     </ol>
                   </div>
                 </div>
-              </div><!-- /.container-fluid -->
+                    </div>
             </section>
         
-            <!-- Main content -->
+
             <section class="content">
         
-              <!-- Default box -->
+
               <div class="card">
                 <div class="card-header">
                   <h3 class="card-title">Title</h3>
@@ -864,18 +864,18 @@ export default function Authenticated({ auth, header, children }) {
                 <div class="card-body">
                   Start creating your amazing application!
                 </div>
-                <!-- /.card-body -->
+
                 <div class="card-footer">
                   Footer
                 </div>
-                <!-- /.card-footer-->
+
               </div>
-              <!-- /.card -->
+
         
             </section>
-            <!-- /.content -->
+
           </div>
-          <!-- /.content-wrapper -->
+
         
           <footer class="main-footer">
             <div class="float-right d-none d-sm-block">
@@ -884,13 +884,14 @@ export default function Authenticated({ auth, header, children }) {
             <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
           </footer>
         
-          <!-- Control Sidebar -->
+
           <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
+
           </aside>
-          <!-- /.control-sidebar -->
+
         </div>
-        <!-- ./ wrapper-- >
+
+
 
     );
 }
