@@ -4,6 +4,7 @@ import Dropdown from '@/Components/Dropdown';
 import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
+import route from 'ziggy-js';
 
 export default function Authenticated({ auth, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
@@ -20,7 +21,7 @@ export default function Authenticated({ auth, header, children }) {
                         <a className="nav-link" data-widget="pushmenu" href="#" role="button"><i className="fas fa-bars"></i></a>
                     </li>
                     <li className="nav-item d-none d-sm-inline-block">
-                        <a href="../../index3.html" className="nav-link">Home</a>
+                        <Link href={route('dashboard')} className="nav-link">Home</Link>
                     </li>
                 </ul>
 
