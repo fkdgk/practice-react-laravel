@@ -15,11 +15,12 @@ class UpdateController extends Controller
         $request -> validate([
             'name' => ['required'],
         ]);
-        
+
         $user = $request->user();
         $user -> update([
             'name' => $request -> name,
         ]);
-        return $user;
+        
+        return redirect()->back();
     }
 }
