@@ -128,7 +128,7 @@ export default function Authenticated({ auth, header, children }) {
                 </section>
 
                 <section className="content">
-                    content
+                    {children}
                 </section>
             </div>
 
