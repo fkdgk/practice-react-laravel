@@ -2,9 +2,9 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { useForm } from '@inertiajs/react'
 
 export default function Edit({ auth }) {
-
+    console.log(auth);
     const { data, setData, post, processing, errors } = useForm({
-        name: '',
+        name: auth.user.name,
     });
 
     function submit(e) {
