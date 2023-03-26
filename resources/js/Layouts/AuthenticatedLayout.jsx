@@ -61,7 +61,7 @@ export default function Authenticated({ auth, header, children }) {
                             <a href="#" className="dropdown-item">
 
                                 <div className="media">
-                                    <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" className="img-size-50 mr-3 img-circle" />
+                                    <img src="img/user1-128x128.jpg" alt="User Avatar" className="img-size-50 mr-3 img-circle" />
                                     <div className="media-body">
                                         <h3 className="dropdown-item-title">
                                             Brad Diesel
@@ -77,7 +77,7 @@ export default function Authenticated({ auth, header, children }) {
                             <a href="#" className="dropdown-item">
 
                                 <div className="media">
-                                    <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" className="img-size-50 img-circle mr-3" />
+                                    <img src="img/user8-128x128.jpg" alt="User Avatar" className="img-size-50 img-circle mr-3" />
                                     <div className="media-body">
                                         <h3 className="dropdown-item-title">
                                             John Pierce
@@ -93,7 +93,7 @@ export default function Authenticated({ auth, header, children }) {
                             <a href="#" className="dropdown-item">
 
                                 <div className="media">
-                                    <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" className="img-size-50 img-circle mr-3" />
+                                    <img src="img/user3-128x128.jpg" alt="User Avatar" className="img-size-50 img-circle mr-3" />
                                     <div className="media-body">
                                         <h3 className="dropdown-item-title">
                                             Nora Silvester
@@ -154,7 +154,7 @@ export default function Authenticated({ auth, header, children }) {
             <aside className="main-sidebar sidebar-dark-primary elevation-4">
 
                 <a href="../../index3.html" className="brand-link">
-                    <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style="{{opacity:'0.8'}}" />
+                    <img src="img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{ opacity: '0.8' }} />
                     <span className="brand-text font-weight-light">AdminLTE 3</span>
                 </a>
 
@@ -163,7 +163,7 @@ export default function Authenticated({ auth, header, children }) {
 
                     <div className="user-panel mt-3 pb-3 mb-3 d-flex">
                         <div className="image">
-                            <img src="../../dist/img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" />
+                            <img src="img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" />
                         </div>
                         <div className="info">
                             <a href="#" className="d-block">Alexander Pierce</a>
@@ -186,7 +186,7 @@ export default function Authenticated({ auth, header, children }) {
                     <nav className="mt-2">
                         <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-                       with font-awesome or any other icon font library -->
+
                             <li className="nav-item">
                                 <a href="#" className="nav-link">
                                     <i className="nav-icon fas fa-tachometer-alt"></i>
@@ -876,22 +876,15 @@ export default function Authenticated({ auth, header, children }) {
 
             </div>
 
-
             <footer className="main-footer">
                 <div className="float-right d-none d-sm-block">
                     <b>Version</b> 3.2.0
                 </div>
                 <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
             </footer>
-
-
             <aside className="control-sidebar control-sidebar-dark">
-
             </aside>
-
         </div>
-
-
 
     );
 }
