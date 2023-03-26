@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\User;
 use App\Http\Controllers\Profile;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
@@ -7,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::middleware('auth')->group(function () {
+    Route::get('/user/index', User\IndexController::class)->name('user.index');
 
     Route::get('/', function () {
         return Inertia::render('Dashboard');
