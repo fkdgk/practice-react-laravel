@@ -5,6 +5,7 @@ export default function Edit({ auth }) {
     console.log(auth);
     const { data, setData, post, processing, errors } = useForm({
         name: auth.user.name,
+        email: auth.user.email,
     });
 
     function submit(e) {
@@ -27,6 +28,11 @@ export default function Edit({ auth }) {
                                     <label htmlFor="userName">user name</label>
                                     <input value={data.name} onChange={e => { setData('name', e.target.value) }} type="text" className="form-control" id="userName" placeholder="Enter user name" />
                                     {errors.name && <div>{errors.name}</div>}
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="userEmail">Email</label>
+                                    <input value={data.email} onChange={e => { setData('email', e.target.value) }} type="text" className="form-control" id="userEmail" placeholder="Enter email" />
+                                    {errors.email && <div>{errors.email}</div>}
                                 </div>
                             </div>
                             <div className="card-footer">
