@@ -54,10 +54,11 @@ export default function Authenticated({ auth, header, children }) {
 
 
                                 <li className="nav-item">
-                                    <a href="../widgets.html" className="nav-link">
-                                        <i className="nav-icon fas fa-th"></i>
-                                        <p>Widgets</p>
-                                    </a>
+                                    <Link href={route('user.index')} className='nav-link'>
+                                        <i className="nav-icon fa fa-users"></i>
+                                        <p>ユーザ一覧</p>
+                                    </Link>
+
                                 </li>
                                 <li className="nav-item">
                                     <a href="../widgets.html" className="nav-link">
