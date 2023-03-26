@@ -25,7 +25,7 @@ export default function Authenticated({ auth, header, children }) {
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item dropdown">
                             <a className="nav-link" data-toggle="dropdown" href="#">
-                                <i className="far fa-bell"></i> Hello
+                                <i className="far fa-bell"></i> {auth.user.name}
                             </a>
                             <div className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                                 <span className="dropdown-item dropdown-header">15 Notifications</span>
@@ -62,16 +62,6 @@ export default function Authenticated({ auth, header, children }) {
 
 
                     <div className="sidebar">
-
-                        <div className="user-panel mt-3 pb-3 mb-3 d-flex">
-                            <div className="image">
-                                <img src="img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" />
-                            </div>
-                            <div className="info">
-                                <a href="#" className="d-block">user name</a>
-                            </div>
-                        </div>
-
 
                         <nav className="mt-2">
                             <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
