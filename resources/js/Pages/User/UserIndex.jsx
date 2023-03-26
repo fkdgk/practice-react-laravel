@@ -4,14 +4,11 @@ export default function UserIndex({ auth }) {
   return (
     <AuthenticatedLayout
       auth={auth}
-      header='Profile'
+      header='ユーザ一覧'
     >
       <div className="row">
         <div className="col">
           <div className="card">
-            <div className="card-header">
-              <h3 className="card-title">Responsive Hover Table</h3>
-            </div>
 
             <div className="card-body table-responsive p-0">
               <table className="table table-hover text-nowrap">
