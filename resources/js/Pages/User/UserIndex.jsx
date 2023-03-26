@@ -13,7 +13,7 @@ export default function UserIndex({ auth }) {
           <div className="card">
 
             <div className="card-body table-responsive p-0">
-              <table className="table table-hover text-nowrap">
+              <table className="table table-sm table-hover text-nowrap">
                 <thead>
                   <tr>
                     <th>ID</th>
