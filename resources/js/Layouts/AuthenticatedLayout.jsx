@@ -1,13 +1,8 @@
 import { useState } from 'react';
-import ApplicationLogo from '@/Components/ApplicationLogo';
-import Dropdown from '@/Components/Dropdown';
-import NavLink from '@/Components/NavLink';
-import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
 import route from 'ziggy-js';
 
 export default function Authenticated({ auth, header, children }) {
-    const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
 
     return (
 
@@ -59,10 +54,10 @@ export default function Authenticated({ auth, header, children }) {
 
             <aside className="main-sidebar sidebar-dark-primary elevation-4">
 
-                <a href="../../index3.html" className="brand-link">
+                <Link href={route('dashboard')} className="brand-link">
                     <img src="img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{ opacity: '0.8' }} />
                     <span className="brand-text font-weight-light">Logo</span>
-                </a>
+                </Link>
 
 
                 <div className="sidebar">
