@@ -13,7 +13,9 @@ class UpdateController extends Controller
     public function __invoke(Request $request)
     {
         $user = $request->user();
+        $user -> update([
+            'name' => $request -> name,
+        ]);
         return $user;
-        return $request;
     }
 }
