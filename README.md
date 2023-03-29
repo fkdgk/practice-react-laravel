@@ -3,7 +3,11 @@
 ```
 cp .env.example .env
 ./vendor/bin/sail build --no-cache
-APP_PORT=3000 ./vendor/bin/sail up
+./vendor/bin/sail up -d
+./vendor/bin/sail shell
+composer install
+npm install
+npm run dev
 ```
 http://localhost:3000
 
