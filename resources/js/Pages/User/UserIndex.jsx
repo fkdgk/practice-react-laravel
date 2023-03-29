@@ -32,7 +32,7 @@ export default function UserIndex({ auth }) {
                           <td>{user.name}</td>
                           <td>{user.email}</td>
                           <td>{user.created_at}</td>
-                          <td><Link className='btn btn-primary btn-xs'>edit</Link></td>
+                          <td><Link href={route('user.show', [{ 'id': user.id }])} className='btn btn-primary btn-xs'>edit</Link></td>
                         </tr>
                       )
                     })
