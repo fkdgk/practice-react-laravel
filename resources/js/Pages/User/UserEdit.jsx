@@ -23,10 +23,16 @@ export default function UserShow({ auth }) {
         <div className="col-lg-5">
           <div className="card">
             <div className="card-header">
+              <div className="btn-group">
+                <Link
+                  className='btn btn-default'
+                  href={route('user.index')}
+                >一覧へ戻る</Link>
               <Link
                 className='btn btn-default'
                 href={route('user.show', [{ id: props.user.id }])}
-              >詳細へ戻る</Link>
+                >詳細</Link>
+              </div>
             </div>
             <div className="card-body">
               <form onSubmit={submit}>
