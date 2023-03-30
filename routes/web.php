@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function () {
+    Route::get('/user/edit', User\EditController::class)->name('user.edit');
     Route::get('/user/index', User\IndexController::class)->name('user.index');
     Route::get('/user/show', User\ShowController::class)->name('user.show');
 

@@ -6,7 +6,7 @@ export default function UserShow({ auth }) {
   return (
     <AuthenticatedLayout
       auth={auth}
-      header='ユーザ詳細'
+      header='ユーザ編集'
     >
       <div className="row">
         <div className="col-lg-5">
@@ -14,8 +14,8 @@ export default function UserShow({ auth }) {
             <div className="card-header">
               <Link
                 className='btn btn-default'
-                href={route('user.edit', [{ id: props.user.id }])}
-              >編集</Link>
+                href={route('user.show', [{ id: props.user.id }])}
+              >詳細へ戻る</Link>
             </div>
             <div className="card-body">
               <table className="table table-bordered">
