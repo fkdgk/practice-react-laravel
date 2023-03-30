@@ -3,6 +3,17 @@ import { useForm, Link, usePage } from '@inertiajs/react'
 export default function UserShow({ auth }) {
   const { props } = usePage()
   console.log(props);
+  const { data, setData, post, processing, errors } = useForm({
+    id: props.user.id,
+    name: props.user.name,
+    email: props.user.email,
+  });
+
+  function submit(e) {
+    e.preventDefault()
+    post(route('user.update'))
+  }
+
   return (
     <AuthenticatedLayout
       auth={auth}
@@ -18,19 +29,31 @@ export default function UserShow({ auth }) {
               >詳細へ戻る</Link>
             </div>
             <div className="card-body">
+              <form onSubmit={submit}>
               <table className="table table-bordered">
                 <tbody>
                   <tr>
                     <th>ID</th>
-                    <td>{props.user.id}</td>
+                      <td>
+                        {props.user.id}
+                      </td>
                   </tr>
                   <tr>
                     <th>名前</th>
-                    <td>{props.user.name}</td>
+                      <td>
+                        <input type="text" value={data.name} onChange={(e) => { setData('name', e.target.value) }} className='form-control' />
+                        {
+                          errors.name && <div className="text-danger small">
+                            {errors.name}
+                          </div>
+                        }
+                      </td>
                   </tr>
                   <tr>
                     <th>Email</th>
-                    <td>{props.user.email}</td>
+                      <td>
+                        <input type="text" value={data.email} onChange={(e) => { setData('email', e.target.value) }} className='form-control' />
+                      </td>
                   </tr>
                   <tr>
                     <th>作成日</th>
@@ -38,6 +61,8 @@ export default function UserShow({ auth }) {
                   </tr>
                 </tbody>
               </table>
+                <button type="submit" disabled={processing} className='btn btn-primary'>更新</button>
+              </form>
             </div>
 
           </div>
