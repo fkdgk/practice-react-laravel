@@ -15,10 +15,12 @@ class UpdateController extends Controller
     {
         $request->validate([
             'name' => ['required', 'min:2'],
+            'email' => ['required', 'email', 'unique:users,email,' . $request->id],
         ]);
         $user = User::find($request->id);
         $user->update([
             'name' => $request->name,
+            'email' => $request->email,
         ]);
         return redirect()->back();
     }

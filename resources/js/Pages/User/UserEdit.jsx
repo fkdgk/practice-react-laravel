@@ -53,6 +53,11 @@ export default function UserShow({ auth }) {
                     <th>Email</th>
                       <td>
                         <input type="text" value={data.email} onChange={(e) => { setData('email', e.target.value) }} className='form-control' />
+                        {
+                          errors.email && <div className="text-danger small">
+                            {errors.email}
+                          </div>
+                        }
                       </td>
                   </tr>
                   <tr>
