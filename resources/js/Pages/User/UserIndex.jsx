@@ -12,7 +12,7 @@ export default function UserIndex({ auth }) {
         <div className="col">
           <div className="card">
 
-            <div className="card-body table-responsive p-0">
+            <div className="card-body table-responsive">
               <table className="table table-sm table-hover text-nowrap">
                 <thead>
                   <tr>
@@ -20,7 +20,7 @@ export default function UserIndex({ auth }) {
                     <th>User</th>
                     <th>Date</th>
                     <th>created</th>
-                    <th>edit</th>
+                    <th>詳細</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -32,7 +32,7 @@ export default function UserIndex({ auth }) {
                           <td>{user.name}</td>
                           <td>{user.email}</td>
                           <td>{user.created_at}</td>
-                          <td><Link href={route('user.show', [{ 'id': user.id }])} className='btn btn-primary btn-xs'>edit</Link></td>
+                          <td><Link href={route('user.show', user)} className='btn btn-primary btn-xs'>詳細</Link></td>
                         </tr>
                       )
                     })

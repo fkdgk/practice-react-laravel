@@ -12,9 +12,8 @@ class ShowController extends Controller
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request)
+    public function __invoke(User $user)
     {
-        $user = User::find($request->id);
         return Inertia::render('User/UserShow', [
             'user' => $user,
         ]);

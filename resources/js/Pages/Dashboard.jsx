@@ -1,6 +1,7 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 
 export default function Dashboard(props) {
+    // console.log(props)
     return (
         <AuthenticatedLayout
             auth={props.auth}

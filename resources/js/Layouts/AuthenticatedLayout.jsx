@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Head, Link } from '@inertiajs/react';
+import { Head, Link, usePage } from '@inertiajs/react';
 import route from 'ziggy-js';
 
 export default function Authenticated({ auth, header, children }) {
-
+    const { props } = usePage();
+    console.log(props)
     return (
         <>
             <Head title={header} />
@@ -92,10 +93,21 @@ export default function Authenticated({ auth, header, children }) {
                                 </div>
                                 <div className="col-sm-6">
                                     <ol className="breadcrumb float-sm-right">
-                                        <li className="breadcrumb-item">
-                                            <Link href={route('dashboard')}>Home</Link>
-                                        </li>
-                                        <li className="breadcrumb-item active">{header}</li>
+
+                                        {
+                                            props.breadcrumbs.map((breadcrumb, index) => {
+                                                return (
+                                                    breadcrumb.is_current_page
+                                                        ?
+                                                        <li className="breadcrumb-item active" key={index}>{breadcrumb.title}</li>
+                                                        :
+                                                        <li className="breadcrumb-item" key={index}>
+                                                            <Link href={breadcrumb.url}>{breadcrumb.title}</Link>
+                                                        </li>
+                                                )
+                                            })
+                                        }
+
                                     </ol>
                                 </div>
                             </div>

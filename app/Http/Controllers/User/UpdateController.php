@@ -22,8 +22,6 @@ class UpdateController extends Controller
             'name' => $request->name,
             'email' => $request->email,
         ]);
-        return redirect()->route('user.show', [
-            'id' => $request->id,
-        ]);
+        return redirect()->route('user.show', $user);
     }
 }
