@@ -1,8 +1,19 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { useForm, Link, usePage } from '@inertiajs/react'
+
 export default function UserShow({ auth }) {
   const { props } = usePage()
   console.log(props);
+
+  const { processing, delete: destroy } = useForm({
+    user: props.user,
+  })
+
+  function submit(e) {
+    e.preventDefault();
+    destroy(route('user.delete', props.user))
+  }
+
   return (
     <AuthenticatedLayout
       auth={auth}
@@ -24,7 +35,9 @@ export default function UserShow({ auth }) {
                   >編集</Link>
                 </div>
                 <div className="">
-                  <button className="btn btn-danger">ユーザ削除</button>
+                  <form onSubmit={submit}>
+                    <button type='submit' disabled={processing} className="btn btn-danger">ユーザ削除</button>
+                  </form>
                 </div>
               </div>
 

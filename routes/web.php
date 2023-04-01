@@ -6,8 +6,8 @@ use App\Http\Controllers\Profile;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 Route::middleware('auth')->group(function () {
+    Route::delete('/user/delete/{user}', User\DeleteController::class)->name('user.delete');
 
-    
     Route::post('/user/update', User\UpdateController::class)
         ->name('user.update');
 
