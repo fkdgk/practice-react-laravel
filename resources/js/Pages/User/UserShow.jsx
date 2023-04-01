@@ -12,16 +12,22 @@ export default function UserShow({ auth }) {
         <div className="col-lg-5">
           <div className="card">
             <div className="card-header">
-              <div className="btn-group">
-                <Link
-                  className='btn btn-default'
-                  href={route('user.index')}
-                >一覧へ戻る</Link>
-              <Link
-                className='btn btn-default'
-                href={route('user.edit', [{ id: props.user.id }])}
-              >編集</Link>
+              <div className="d-flex justify-content-between">
+                <div className="btn-group">
+                  <Link
+                    className='btn btn-default'
+                    href={route('user.index')}
+                  >一覧へ戻る</Link>
+                  <Link
+                    className='btn btn-default'
+                    href={route('user.edit', [{ id: props.user.id }])}
+                  >編集</Link>
+                </div>
+                <div className="">
+                  <button className="btn btn-danger">ユーザ削除</button>
+                </div>
               </div>
+
             </div>
             <div className="card-body">
               <table className="table table-bordered">

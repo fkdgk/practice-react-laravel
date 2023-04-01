@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 Route::middleware('auth')->group(function () {
 
+    
     Route::post('/user/update', User\UpdateController::class)
         ->name('user.update');
 

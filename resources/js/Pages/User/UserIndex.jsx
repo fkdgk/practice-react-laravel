@@ -21,7 +21,6 @@ export default function UserIndex({ auth }) {
                     <th>User</th>
                     <th>Date</th>
                     <th>created</th>
-                    <th>詳細</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -33,7 +32,6 @@ export default function UserIndex({ auth }) {
                           <td>{user.name}</td>
                           <td>{user.email}</td>
                           <td>{user.created_at}</td>
-                          <td><Link href={route('user.show', user)} className='btn btn-primary btn-xs'>詳細</Link></td>
                         </tr>
                       )
                     })
