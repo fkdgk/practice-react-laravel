@@ -11,7 +11,9 @@ export default function UserShow({ auth }) {
 
   function submit(e) {
     e.preventDefault();
-    destroy(route('user.delete', props.user))
+    if (confirm('削除しますか？')) {
+      destroy(route('user.delete', props.user))
+    }
   }
 
   return (
