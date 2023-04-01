@@ -1,5 +1,6 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import { useForm, Link, usePage } from '@inertiajs/react'
+import { router, useForm, Link, usePage } from '@inertiajs/react'
+import route from 'ziggy-js';
 export default function UserIndex({ auth }) {
   const { props } = usePage()
   console.log(props);
@@ -27,7 +28,7 @@ export default function UserIndex({ auth }) {
                   {
                     props.users.map((user, index) => {
                       return (
-                        <tr key={index}>
+                        <tr key={index} onClick={() => router.visit(route('user.show', user))} role='button'>
                           <td>{user.id}</td>
                           <td>{user.name}</td>
                           <td>{user.email}</td>
